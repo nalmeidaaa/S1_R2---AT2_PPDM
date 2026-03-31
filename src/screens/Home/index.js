@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Pressable, StyleSheet, Text, View, ScrollView } from 'react-native';
+import { Pressable, StyleSheet, Text, View, ScrollView, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 
@@ -10,6 +10,19 @@ export default function Home() {
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <Text style={styles.titulo}>Bem-vindo à Tech Store!</Text>
+
+        {/* Texto sobre a loja */}
+        <Text style={styles.sobre}>
+          Na Tech Store, oferecemos os melhores produtos tecnológicos para deixar sua vida mais conectada e prática. Confira nossas novidades e encontre o que você precisa!
+        </Text>
+
+        {/* Imagem da loja */}
+        <Image
+          source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLePjSX0a2o4ty-F3MlvuCHrUPb82N2ngbQ&s' }}
+          style={styles.imagem}
+          resizeMode="cover"
+        />
+
         <View style={styles.cardsContainer}>
           <Pressable style={styles.button} onPress={() => navigation.navigate('Produtos')}>
             <Text style={styles.buttonTitle}>Produtos</Text>
@@ -46,6 +59,20 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 
+  sobre: {
+    fontSize: 16,
+    textAlign: 'center',
+    marginVertical: 10,
+    color: '#374151',
+  },
+
+  imagem: {
+    width: 300,
+    height: 300,
+    borderRadius: 150,
+    marginVertical: 15,
+  },
+
   cardsContainer: {
     width: '100%',
     alignItems: 'center',
@@ -59,7 +86,6 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    // sombra
     elevation: 4,
   },
 
@@ -67,12 +93,12 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 5,
-    color: 'white'
+    color: 'white',
   },
 
   buttonText: {
     fontSize: 14,
     textAlign: 'center',
-    color: 'white'
+    color: 'white',
   },
 });

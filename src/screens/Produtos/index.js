@@ -182,98 +182,111 @@ export default function Produtos() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f3f4f6',
-    padding: 10
+    backgroundColor: '#f0f4f8',
+    padding: 10,
   },
 
   scrollContent: {
-    paddingBottom: 20
+    paddingBottom: 20,
   },
 
   card: {
     width: '100%',
-    backgroundColor: '#fff',
-    borderRadius: 12,
+    backgroundColor: '#ffffff',
+    borderRadius: 20,
     padding: 15,
-    marginVertical: 10,
-
-    elevation: 5,
+    marginVertical: 12,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 6,
   },
 
   imagem: {
     width: '100%',
-    height: 320,
-    resizeMode: 'contain'
+    height: 250,
+    borderRadius: 15,
+    resizeMode: 'contain',
+    marginBottom: 10,
   },
 
   tituloProduto: {
-    fontSize: 22,
-    fontWeight: 'bold',
-    marginTop: 10,
-    textAlign: 'center'
+    fontSize: 20,
+    fontWeight: '700',
+    textAlign: 'center',
+    marginVertical: 5,
+    color: '#111827',
   },
 
   preco: {
-    fontSize: 18,
-    color: '#555',
-    marginTop: 5
+    fontSize: 16,
+    color: '#6b7280',
+    textAlign: 'center',
+    marginTop: 3,
   },
 
   precoPix: {
-    fontSize: 20,
-    color: '#16a34a',
+    fontSize: 18,
+    color: '#10b981',
     fontWeight: 'bold',
-    marginTop: 5
+    textAlign: 'center',
+    marginTop: 3,
   },
 
   informacao: {
     fontSize: 16,
-    marginTop: 15
+    marginTop: 15,
+    color: '#374151',
   },
 
   contador: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 10
+    marginTop: 10,
+    justifyContent: 'center',
   },
 
   botaoQtd: {
-    backgroundColor: '#ddd',
+    backgroundColor: '#e5e7eb',
     width: 40,
     height: 40,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 5
+    borderRadius: 8,
   },
 
   textoQtd: {
     fontSize: 20,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    color: '#111827',
   },
 
   numero: {
-    marginHorizontal: 15,
+    marginHorizontal: 20,
     fontSize: 18,
-    fontWeight: 'bold'
+    fontWeight: '600',
+    color: '#111827',
   },
 
   botao: {
     backgroundColor: '#3b82f6',
     marginTop: 20,
-    borderRadius: 10,
+    borderRadius: 15,
     height: 50,
     width: '100%',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    shadowColor: '#3b82f6',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 5,
   },
 
   textoBotao: {
     color: '#fff',
     fontSize: 16,
-    fontWeight: 'bold'
-  }
+    fontWeight: '700',
+  },
 });
